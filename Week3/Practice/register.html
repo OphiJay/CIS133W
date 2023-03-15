@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+        <script>
+            var REQUIRED_PASSWORD_CHARACTERS="!@~#$%^&*+=";
+
+            function validateUserName(){
+                var value = document.getElementById("userName").value;
+                var message = document.getElementById("userNameMessage");
+
+                message.style.color = "red";
+
+                if (value == ""){
+                    message.innerText = "UserName must be 1 or more alphanumeric characters"
+                } else {
+                    message.innerText = "";
+                }
+
+                for(i = 0; i < value.length; i++){
+                    var character = value.charAt(i);
+
+                    if(!((character >= "a" && character <= "z")
+                    ||(character >= "A" && character <= "Z")
+                    ||(character >= "0" && character <= "9")))
+                    {
+                    message.innerText = "Character '" + character + "' is invalid"
+                    } else {
+                        message.style.color = "green";
+                        message.innerText = "Valid username"
+                    }
+                }
+            }
+
+            function validatePassword(){
+                var value = document.getElementById("password").value;
+                var message = document.getElementById("passwordMessage");
+                var hasUpper = false;
+                var hasDigit = false;
+                var hasSpecial = false;
+
+                message.style.color = "red";
+
+                // Password Reqs
+                if (value == ""){
+                    message.innerText = "Password must be at least 8 characters," +
+                    " with at least 1 uppercase, 1 number, and 1 character from '" + REQUIRED_PASSWORD_CHARACTERS + "'";
+                } else {
+                    message.innerText = "";
+                }
+
+                // Check length
+                if (value.length < 8){
+                    message.innerText = "Password must be at least 8 characters";
+                    return;
+                }
+
+
+                // Check Upper, Number, & Special
+                for(i = 0; i < value.length; i++){
+                    var character = value.charAt(i);
+
+                    if(character >= "A" && character <= "Z"){
+                        hasUpper = true;
+                    }else if (character >= "0" && character <= "9"){
+                        hasDigit = true;
+                    } else if (REQUIRED_PASSWORD_CHARACTERS.indexOf(character) >=0) {
+                        hasSpecial = true;
+                    }
+                }
+
+                if (!hasUpper){
+                    message.innerText = "Password must have at least one uppercase letter";
+                } else if (!hasDigit){
+                    message.innerText = "Password must have at least one number"
+                } else if (!hasSpecial){
+                    message.innerText = "Password must have at least one character from '" + REQUIRED_PASSWORD_CHARACTERS +"'";
+                } else {
+                        message.style.color = "green";
+                        message.innerText = "Valid Password"
+                    }
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Login</h1>
+
+        <h3>Username</h3>
+        <input type="text" id="userName" oninput="validateUserName();">
+        <span style="color:red" id="userNameMessage"></span>
+        <br>
+        <h3>Password</h3>
+        <input type="password" id="password" oninput="validatePassword();">
+        <span style="color:red" id="passwordMessage"></span>
+        <br>
+    </body>
+
+</html>

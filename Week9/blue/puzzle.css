@@ -1,0 +1,47 @@
+.tile {
+    /* border: 1px solid black; */
+    display: inline-block;
+    margin: 2px;
+    background-color: lightgray;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    background-color: cadetblue;
+}
+#winScreen {
+    color: white;
+    font-family: 'Tilt Warp', cursive;
+    text-align: center;
+    /* font-size: 100px; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+} 
+#board {
+    position: absolute;
+}
+#playAgainButton {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+}
+#playAgainButton:hover {
+    background-color: darkcyan;
+}#moveTotal {
+    font-size: 50%;
+}

@@ -1,0 +1,44 @@
+/* body {
+
+} */
+.pageHeader {
+padding: 20px;
+margin: 0px;
+text-align: center;
+font-family: 'Tilt Warp', cursive;
+}
+.pageContent {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
+}
+.choice {
+    width: 20%;
+    height: 20%;
+    font-family: 'Montserrat', sans-serif;
+}
+#red {
+    background-color: darkred;;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+}
+#blue {
+    background-color:darkcyan;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+}
+.pageFooter {
+
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}

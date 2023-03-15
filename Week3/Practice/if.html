@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Control Structures / If Statements</title>
+        <script>
+            function checkChanged(){
+                console.log("Change");
+                var checkbox = document.getElementById("puppyCheckbox");
+                var div = document.getElementById("puppyContent");
+                if(checkbox.checked)
+                {
+                    div.style.display = "";
+                } else {
+                    div.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>The If Statement</h1>  
+        <input type="checkbox" onchange="checkChanged();" id="puppyCheckbox" checked>
+        <div id="puppyContent">
+            <img src="images/puppy.jpg">
+        </div>
+    </body>
+</html>

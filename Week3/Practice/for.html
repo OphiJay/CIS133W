@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Control Structures / For Statement</title>
+        <script>
+            function changeChooser(){
+                console.log("Change");
+                var chooser = document.getElementById("animalChooser");
+                var options = chooser.options;
+
+                for(var counter = 0; counter < options.length; counter++) {
+                    if(options[counter].selected)
+                    {
+                        document.getElementById(options[counter].value).style.display = "";
+                    } else {
+                        document.getElementById(options[counter].value).style.display ="none";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="changeChooser();">
+        <h1>The For Statement</h1>  
+        
+        <select id="animalChooser" onchange="changeChooser();">
+            <option value="puppyContent">Puppy</option>
+            <option value="pigContent">Pig</option>
+            <option value="bunnyContent">Bunny</option>
+            <option value="fennecContent">Fennec</option>
+            <option value="quokaContent">Quoka</option>
+        </select>
+
+
+        <div id="puppyContent">
+            <h2>Cute Puppy</h2>
+            <img src="images/puppy.jpg">
+        </div>
+        <div id="pigContent">
+            <h2>Cute Pig</h2>
+            <img src="images/pig.jpg">
+        </div>
+        <div id="bunnyContent">
+            <h2>Cute Bunny</h2>
+            <img src="images/bunny.jpg">
+        </div>
+        <div id="fennecContent">
+            <h2>Cute Fennec</h2>
+            <img src="images/fennec.jpg" hieght="60%" width="60%">
+        </div>
+        <div id="quokaContent">
+            <h2>Cute Quoka</h2>
+            <img src="images/quoka.jpg" hieght="60%" width="60%">
+        </div>
+
+    </body>
+</html>

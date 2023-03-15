@@ -1,0 +1,13 @@
+#click {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2em;
+    padding:  5px;
+    position: absolute;
+}
+#bigSpace {
+    height: 1000px;
+}

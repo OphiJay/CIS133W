@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>LAB 03 | ASTRO</title>
+
+      <meta charset="UTF-8">
+      <meta name="description" content="Lab 03, Astrology">
+      <meta name="author" content="Ophi Jay">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <script>
+        function changeChooser() {
+          var chooser = document.getElementById("astroChooser");
+          var options = chooser.options;
+
+          for (let i = 0; i < options.length; i++) {
+            if (options[i].selected) {
+              document.getElementById(options[i].value).style.display = "";
+
+              if ((options[i].label == "Taurus")||(options[i].label == "Virgo")||(options[i].label == "Capricorn")) {
+                document.body.style.backgroundColor = "Olive";
+                document.body.style.color = "white";
+              } else if ((options[i].label == "Aries")||(options[i].label == "Leo")||(options[i].label == "Sagittarius")) {
+                document.body.style.backgroundColor = "Maroon";
+                document.body.style.color = "white";
+              } else if ((options[i].label == "Cancer")||(options[i].label == "Scorpio")||(options[i].label == "Pisces")) {
+                document.body.style.backgroundColor = "SteelBlue";
+                document.body.style.color = "white";
+              } else if ((options[i].label == "Gemini")||(options[i].label == "Libra")||(options[i].label == "Aquarius")) {
+                document.body.style.backgroundColor = "MediumPurple";
+                document.body.style.color = "white";
+              } else {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+              }
+            } else {
+              document.getElementById(options[i].value).style.display ="none";
+            }
+          }
+        }
+      </script>
+
+      <style>
+        body {
+          text-align:center; font-family: 'Gill Sans', sans-serif;
+        }
+        h1 {
+          font-style: bold;
+        }
+      </style>
+
+    </head>
+
+    <body onload="changeChooser();">
+      <h1>ASTRO</h1>  
+      <hr>
+      <label for="astroChooser">Choose Your Sign</label>
+      <select id="astroChooser" onchange="changeChooser();">
+        <option value="blankContent">---</option>
+        <option value="ariesContent">Aries</option>
+        <option value="taurusContent">Taurus</option>
+        <option value="geminiContent">Gemini</option>
+        <option value="cancerContent">Cancer</option>
+        <option value="leoContent">Leo</option>
+        <option value="virgoContent">Virgo</option>
+        <option value="libraContent">Libra</option>
+        <option value="scorpioContent">Scorpio</option>
+        <option value="sagittariusContent">Sagittarius</option>
+        <option value="capricornContent">Capricorn</option>
+        <option value="aquariusContent">Aquarius</option>
+        <option value="piscesContent">Pisces</option>
+      </select>
+      <hr>
+      
+      <div id="blankContent">
+        <h2>Your Sign Is...</h2>
+      </div>
+
+      <div id="ariesContent">
+        <h2>Your Sign Is... Aries ♈</h2>
+        <p>March 21 to April 19</p>
+        <h3>Your Element is Fire 🔥</h3>
+        <h3>Your Representative is The Ram 🐏</h3>
+      </div>
+
+      <div id="taurusContent">
+        <h2>Your Sign Is... Taurus ♉</h2>
+        <p>April 20 to May 20</p>
+        <h3>Your Element is Earth 🌱</h3>
+        <h3>Your Representative is The Bull 🐂</h3>
+      </div>
+
+      <div id="geminiContent">
+        <h2>Your Sign Is... Gemini ♊</h2>
+        <p>May 21 to June 21</p>
+        <h3>Your Element is Air ☁️</h3>
+        <h3>Your Representative is The Twins 🧑‍🤝‍🧑</h3>
+      </div>
+
+      <div id="cancerContent">
+        <h2>Your Sign Is... Cancer ♋</h2>
+        <p>June 22 to July 22</p>
+        <h3>Your Element is Water 💧</h3>
+        <h3>Your Representative is The Crab 🦀</h3>
+      </div>
+
+      <div id="leoContent">
+        <h2>Your Sign Is... Leo ♌</h2>
+        <p>July 23 to August 22</p>
+        <h3>Your Element is Fire 🔥</h3>
+        <h3>Your Representative is The Lion 🦁</h3>
+      </div>
+
+      <div id="virgoContent">
+        <h2>Your Sign Is... Virgo ♍</h2>
+        <p>August 23 to September 22</p>
+        <h3>Your Element is Earth 🌱</h3>
+        <h3>Your Representative is The Maiden 👧</h3>
+      </div>
+
+      <div id="libraContent">
+        <h2>Your Sign Is... Libra ♎</h2>
+        <p>September 23 to October 22</p>
+        <h3>Your Element is Air ☁️</h3>
+        <h3>Your Representative is The Scales ⚖️</h3>
+      </div>
+
+      <div id="scorpioContent">
+        <h2>Your Sign Is... Scorpio ♏</h2>
+        <p>October 23 to November 22</p>
+        <h3>Your Element is Water 💧</h3>
+        <h3>Your Representative is The Scorpion 🦂</h3>
+      </div>
+
+      <div id="sagittariusContent">
+        <h2>Your Sign Is... Sagittarius ♐</h2>
+        <p>	November 23 to December 21</p>
+        <h3>Your Element is Fire 🔥</h3>
+        <h3>Your Representative is The Archer 🏹</h3>
+      </div>
+
+      <div id="capricornContent">
+        <h2>Your Sign Is... Capricorn ♑</h2>
+        <p>December 22 to January 19</p>
+        <h3>Your Element is Earth 🌱</h3>
+        <h3>Your Representative is The Goat 🐐</h3>
+      </div>
+
+      <div id="aquariusContent">
+        <h2>Your Sign Is... Aquarius ♒</h2>
+        <p>January 20 to February 18</p>
+        <h3>Your Element is Air ☁️</h3>
+        <h3>Your Representative is The Water-Bearer 🏺</h3>
+      </div>
+
+      <div id="piscesContent">
+        <h2>Your Sign Is... Pisces ♓</h2>
+        <p>February 19 to March 20</p>
+        <h3>Your Element is Water 💧</h3>
+        <h3>Your Representative is The Fish 🐟</h3>
+      </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,25 @@
+body {
+    background-color: darkseagreen;
+    color: darkslategray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 20px;
+}
+h1, p {
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th { 
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color: darkslategray; color: white;}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkslategray;
+    color: white;
+}
