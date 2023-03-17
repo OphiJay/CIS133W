@@ -287,7 +287,7 @@ $ (
                 moveText = $('#moveTotal');
                 var moveTotal = moves - 100;
                 moveText.text("Moves: " + moveTotal);
-                console.log(moveTotal);
+                //console.log(moveTotal);
             }
 
             function playAgain() {

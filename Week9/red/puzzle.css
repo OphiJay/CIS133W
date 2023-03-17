@@ -31,7 +31,7 @@ body {
     position: absolute;
 }
 #playAgainButton {
-    background-color: black;
+    background-color: darkred;
     border: none;
     color: white;
     padding: 10px 15px;
@@ -41,7 +41,7 @@ body {
     border-radius: 10px;
 }
 #playAgainButton:hover {
-    background-color: darkred;
+    background-color: rgb(61, 5, 5);
 }#moveTotal {
     font-size: 50%;
 }

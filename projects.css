@@ -1,0 +1,32 @@
+.pageHeader {
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    font-size: xx-large;
+    text-decoration: underline #FFC20E;
+}
+.pageContent {
+    font-family: 'Montserrat', sans-serif;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.pageFooter {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#projects {
+    border: 4px solid #FFC20E;
+    border-radius: 10px;
+}
+body {
+    margin: 0px;
+}
+.title {
+    font-size: xx-large;
+}
+table, tr, td {
+    padding: 8px;
+}
